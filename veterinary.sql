@@ -156,3 +156,8 @@ WHERE pet_name = 'Simba the cat';
 UPDATE doctors
 SET lastname = 'reyes-gonzales'
 WHERE title = 'Dr.' AND first_name = 'Sofia';
+
+/*UPDATE THE LASTNAME OF Dr. Sofia to reyes-gonzales*/
+UPDATE doctors
+SET lastname = 'reyes-gonzales'
+WHERE title = 'Dr.' AND first_name = 'Sofia';
