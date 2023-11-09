@@ -48,7 +48,7 @@ PRIMARY KEY (doctorid)
 
 CREATE TABLE invoices (
 
-invoicesid INT,
+invoiceid INT,
 appointid INT,
 totalamount NUMERIC(10,2),
 paymentdate TIME,
