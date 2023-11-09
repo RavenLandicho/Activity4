@@ -19,3 +19,16 @@ PRIMARY KEY (appointid),
 FOREIGN KEY animalid REFERENCES animals(animalid)
 
 );
+CREATE TABLE IF NOT EXISTS public.animals
+(
+animalid INT NOT NULL,
+name VARCHAR(50) NOT NULL,
+species VARCHAR(50) NOT NULL,
+breed VARCHAR(50) NOT NULL,
+dateofbirth DATE NOT NULL,
+gender VARCHAR(10) NOT NULL,
+color VARCHAR(50) NOT NULL,
+ownerid INT NOT NULL,
+PRIMARY KEY(animalid),
+FOREIGN KEY (ownerid) REFERENCES owners(ownerid)
+);
