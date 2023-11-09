@@ -166,3 +166,8 @@ WHERE title = 'Dr.' AND first_name = 'Sofia';
 /*list the total sales of the veterinary.*/
 SELECT SUM(sale_amount) AS total_sales
 FROM sales;
+
+/*list the total number of appointments made by the pet owner named maria*/
+SELECT COUNT(*) AS total_appointments
+FROM appointments
+WHERE pet_owner = 'Maria';
