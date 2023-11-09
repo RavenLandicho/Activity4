@@ -171,3 +171,10 @@ FROM sales;
 SELECT COUNT(*) AS total_appointments
 FROM appointments
 WHERE pet_owner = 'Maria';
+
+/*list the animal with most appointment scheduled.*/
+SELECT species, COUNT(*) AS appointment_count
+FROM appointments
+GROUP BY species
+ORDER BY appointment_count DESC
+LIMIT 1;
