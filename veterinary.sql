@@ -161,3 +161,8 @@ WHERE title = 'Dr.' AND first_name = 'Sofia';
 UPDATE doctors
 SET lastname = 'reyes-gonzales'
 WHERE title = 'Dr.' AND first_name = 'Sofia';
+
+
+/*list the total sales of the veterinary.*/
+SELECT SUM(sale_amount) AS total_sales
+FROM sales;
