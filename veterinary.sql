@@ -35,3 +35,13 @@ FOREIGN KEY animalid REFERENCES animals(animalid)
 
 );
 
+CREATE TABLE IF NOT EXISTS public.doctors
+(
+doctorid INT NOT NULL,
+dfirstname VARCHAR(50) NOT NULL,
+dlastname VARCHAR(50) NOT NULL,
+speciality VARCHAR(100) NOT NULL,
+phone VARCHAR(15) NOT NULL,
+email VARCHAR(100) NOT NULL,
+PRIMARY KEY (doctorid)
+);
