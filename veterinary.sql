@@ -53,7 +53,7 @@ appointid INT,
 totalamount NUMERIC(10,2),
 paymentdate TIME,
 PRIMARY KEY (invoiceid),
-FOREIGN KEY appointid REFERENCES appointments(appointid)
+FOREIGN KEY (appointid) REFERENCES appointments(appointid)
 
 );
 CREATE TABLE IF NOT EXISTS public.medicalrecords
