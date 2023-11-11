@@ -161,11 +161,9 @@ UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dfirstname = 'Dr. Sofia';
 
-/*UPDATE THE LASTNAME OF Dr. Sofia to reyes-gonzales*/
-UPDATE doctors
-SET lastname = 'reyes-gonzales'
-WHERE title = 'Dr.' AND first_name = 'Sofia';
-
+-- feat/list-species-catered
+SELECT DISTINCT species
+FROM animals;
 
 /*list the total sales of the veterinary.*/
 SELECT SUM(sale_amount) AS total_sales
