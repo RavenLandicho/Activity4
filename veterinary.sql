@@ -183,8 +183,10 @@ WHERE animalid IN (
 );
 
 /*list the animal with most appointment scheduled.*/
-SELECT species, COUNT(*) AS appointment_count
-FROM appointments
-GROUP BY species
+SELECT a.animalid, a.name, COUNT(*) AS appointment_count
+FROM animals a
+JOIN appointments ap 
+	ON a.animalid = ap.animalid
+GROUP BY a.animalid, a.name
 ORDER BY appointment_count DESC
 LIMIT 1;
