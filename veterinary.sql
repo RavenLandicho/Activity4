@@ -125,7 +125,7 @@ VALUES (1,1,50.00,'09:30:00'),
 (7,7,75.00,'09:15:00'),
 (8,8,150.00,'16:30:00'),
 (9,9,60.00,'14:45:00'),
-(10,10,40,'11:30:00);
+(10,10,40,'11:30:00');
 
 INSERT INTO medicalrecords(recordid,animalid,recorddate,doctorid,diagnosis,prescription,notes)
 VALUES(1,1,2023-01-05 00:00:00,1,'Healthy check','N/A','Regular check up,no issue detected'),
