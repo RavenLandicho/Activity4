@@ -144,9 +144,8 @@ ALTER TABLE owners
 ADD registereddate DATE;
 
 /*rename the COLUMN NAME paymentdate to paymenttime.*/
-ALTER TABLE payments
-CHANGE paymentdate paymenttime
-DATETIME;
+ALTER TABLE invoices
+RENAME COLUMN paymentdate TO paymenttime;
 
 /*simba the cat’s appointments have been cancelled. Write the query to remove his appointment.*/
 DELETE FROM appointments
