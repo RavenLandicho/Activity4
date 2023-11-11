@@ -166,8 +166,8 @@ SELECT DISTINCT species
 FROM animals;
 
 /*list the total sales of the veterinary.*/
-SELECT SUM(sale_amount) AS total_sales
-FROM sales;
+SELECT SUM(totalamount) AS total_sales
+FROM invoices;
 
 /*list the total number of appointments made by the pet owner named maria*/
 SELECT COUNT(*) AS total_appointments
