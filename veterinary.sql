@@ -148,8 +148,13 @@ ALTER TABLE invoices
 RENAME COLUMN paymentdate TO paymenttime;
 
 /*simba the cat’s appointments have been cancelled. Write the query to remove his appointment.*/
-DELETE FROM appointments
-WHERE pet_name = 'Simba the cat';
+DELETE FROM invoices
+WHERE appointid = (
+	SELECT appointid 
+	FROM appointments 
+	WHERE animalid = (
+		SELECT animalid 
+		FROM animals WHERE name = 'Simba'));
 
 /*UPDATE THE LASTNAME OF Dr. Sofia to reyes-gonzales*/
 UPDATE doctors
