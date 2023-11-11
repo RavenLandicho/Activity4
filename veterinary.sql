@@ -156,10 +156,10 @@ WHERE appointid = (
 		SELECT animalid 
 		FROM animals WHERE name = 'Simba'));
 
-/*UPDATE THE LASTNAME OF Dr. Sofia to reyes-gonzales*/
+/*UPDATE THE LASTNAME OF Dr. Sofia to Reyes-Gonzales*/
 UPDATE doctors
-SET lastname = 'reyes-gonzales'
-WHERE title = 'Dr.' AND first_name = 'Sofia';
+SET dlastname = 'Reyes-Gonzales'
+WHERE dfirstname = 'Dr. Sofia';
 
 /*UPDATE THE LASTNAME OF Dr. Sofia to reyes-gonzales*/
 UPDATE doctors
