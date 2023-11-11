@@ -58,16 +58,16 @@ FOREIGN KEY (appointid) REFERENCES appointments(appointid)
 );
 CREATE TABLE IF NOT EXISTS public.medicalrecords
 (
-	record_id INT NOT NULL,
-	animal_id INT NOT NULL,
-	record_date TIMESTAMP NOT NULL,
-	doctor_id INT NOT NULL,
+	recordid INT NOT NULL,
+	animalid INT NOT NULL,
+	recorddate TIMESTAMP NOT NULL,
+	doctorid INT NOT NULL,
 	diagnosis TEXT NOT NULL,
 	prescription TEXT NOT NULL,
 	notes TEXT NOT NULL,
-	PRIMARY KEY (record_id),
-	FOREIGN KEY (animal_id) REFERENCES animals(animal_id),
-	FOREIGN KEY (doctor_id) REFERENCES doctors(doctor_id)
+	PRIMARY KEY (recordid),
+	FOREIGN KEY (animalid) REFERENCES animals(animalid),
+	FOREIGN KEY (doctorid) REFERENCES doctors(doctorid)
 );
 
 INSERT INTO owners(ownerid,ofirstname,olastname,address,phone,email)
