@@ -172,7 +172,15 @@ FROM invoices;
 /*list the total number of appointments made by the pet owner named maria*/
 SELECT COUNT(*) AS total_appointments
 FROM appointments
-WHERE pet_owner = 'Maria';
+WHERE animalid IN (
+    SELECT animalid
+    FROM animals
+    WHERE ownerid = (
+        SELECT ownerid
+        FROM owners
+        WHERE ofirstname = 'Maria'
+    )
+);
 
 /*list the animal with most appointment scheduled.*/
 SELECT species, COUNT(*) AS appointment_count
